@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Commissions — Polystellar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app">
+
+    <!-- Structural: site navigation, shared across pages -->
+    <nav class="nav">
+      <span class="nav-brand">Polystellar</span>
+      <a href="index.html">Work</a>
+      <a href="index.html">About</a>
+      <a href="commission.html" class="nav-current">Commissions</a>
+      <a href="mailto:mtunir2001@gmail.com">Contact</a>
+      <div class="seg theme-seg">
+        <label class="seg-opt"><input type="radio" name="theme" id="theme-light" checked>Light</label>
+        <label class="seg-opt"><input type="radio" name="theme" id="theme-dark">Dark</label>
+      </div>
+    </nav>
+
+    <!-- Structural: main content region for this page -->
+    <main>
+      <div class="wrap">
+
+        <!-- Text content: page intro -->
+        <section class="hero">
+          <span class="kicker">Custom work — limited slots</span>
+          <div class="hero-row">
+            <h1><span class="line">Commission a piece —</span><span class="line">built around your brief.</span></h1>
+            <p>Character, prop or environment work delivered as a full-resolution render, turntable clip, or game-ready asset. Two slots open per month.</p>
+          </div>
+        </section>
+
+        <hr class="rule2">
+
+        <!-- List (category: list): ordered process the client goes through -->
+        <section class="process">
+          <h2 class="section-title">How a commission runs</h2>
+          <ol class="process-list">
+            <li><strong>Brief &amp; references.</strong> You send goals, references and a deadline; I confirm scope and price.</li>
+            <li><strong>Blockout approval.</strong> A rough sculpt/model is shared for shape and proportion sign-off.</li>
+            <li><strong>Full build.</strong> Sculpting or modeling, texturing and lighting to final quality.</li>
+            <li><strong>Delivery.</strong> Final renders (and source files, if licensed) delivered on the agreed date.</li>
+          </ol>
+
+          <!-- List (category: list): unordered list of good-fit project types -->
+          <p class="fine-print-label">Good fits for a commission:</p>
+          <ul class="fit-list">
+            <li>Original characters and creatures</li>
+            <li>Stylized props and hero assets</li>
+            <li>Environment or set-dressing pieces</li>
+            <li>Turntable/render packages for portfolios or store pages</li>
+          </ul>
+        </section>
+
+        <hr class="rule2">
+
+        <!-- Table (category: table): pricing grid -->
+        <section class="pricing">
+          <h2 class="section-title">Packages &amp; pricing</h2>
+          <table class="price-table">
+            <caption class="visually-hidden">Commission packages, turnaround time, revision allowance and starting price</caption>
+            <thead>
+              <tr>
+                <th scope="col">Package</th>
+                <th scope="col">Turnaround</th>
+                <th scope="col">Revisions</th>
+                <th scope="col">Starting price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Prop / object</th>
+                <td>1–2 weeks</td>
+                <td>2 rounds</td>
+                <td>$180</td>
+              </tr>
+              <tr>
+                <th scope="row">Stylized character</th>
+                <td>2–3 weeks</td>
+                <td>3 rounds</td>
+                <td>$450</td>
+              </tr>
+              <tr>
+                <th scope="row">Environment piece</th>
+                <td>3–4 weeks</td>
+                <td>3 rounds</td>
+                <td>$650</td>
+              </tr>
+              <tr>
+                <th scope="row">Rigged &amp; animation-ready</th>
+                <td>4+ weeks</td>
+                <td>2 rounds</td>
+                <td>$900</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <hr class="rule2">
+
+        <!-- Form (category: form): commission inquiry, multiple input types -->
+        <section class="inquiry">
+          <h2 class="section-title">Start an inquiry</h2>
+          <p class="fine-print-label">No payment is taken here — this only sends me the brief so I can quote it.</p>
+
+          <form class="inquiry-form" action="mailto:mtunir2001@gmail.com" method="post" enctype="text/plain">
+
+            <div class="field-row">
+              <div class="field">
+                <label for="c-name">Name</label>
+                <input type="text" id="c-name" name="name" required>
+              </div>
+              <div class="field">
+                <label for="c-email">Email</label>
+                <input type="email" id="c-email" name="email" required>
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="c-type">Project type</label>
+                <select id="c-type" name="project_type">
+                  <option value="prop">Prop / object</option>
+                  <option value="character">Stylized character</option>
+                  <option value="environment">Environment piece</option>
+                  <option value="rigged">Rigged &amp; animation-ready</option>
+                  <option value="other">Something else</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="c-deadline">Preferred deadline</label>
+                <input type="date" id="c-deadline" name="deadline">
+              </div>
+            </div>
+
+            <fieldset class="field budget-fieldset">
+              <legend>Budget range</legend>
+              <label class="radio-opt"><input type="radio" name="budget" value="low" checked> $150–$400</label>
+              <label class="radio-opt"><input type="radio" name="budget" value="mid"> $400–$800</label>
+              <label class="radio-opt"><input type="radio" name="budget" value="high"> $800+</label>
+            </fieldset>
+
+            <div class="field">
+              <label for="c-ref">Reference images (optional)</label>
+              <input type="file" id="c-ref" name="reference" accept="image/*" multiple>
+            </div>
+
+            <div class="field">
+              <label for="c-brief">Project description</label>
+              <textarea id="c-brief" name="brief" rows="5" placeholder="What are we building, who's it for, and any references or constraints?" required></textarea>
+            </div>
+
+            <label class="check-opt">
+              <input type="checkbox" name="commercial_use" required>
+              This may be used for commercial purposes and I have rights to any references supplied
+            </label>
+
+            <button type="submit" class="btn btn-primary">Send inquiry</button>
+          </form>
+        </section>
+
+      </div>
+    </main>
+
+    <footer><div class="wrap">© 2026 Polystellar. All work shown by permission of respective clients.</div></footer>
+  </div>
+</body>
+</html>
